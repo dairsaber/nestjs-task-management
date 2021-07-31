@@ -6,7 +6,7 @@ export const typeOrmConfig: TypeOrmModuleOptions = {
   host: 'localhost',
   port: 3306,
   username: 'root',
-  password: '123',
+  password: '123456pan',
   database: 'taskmanagement',
   entities: [join(__dirname, '../', '**', '*.entity.{ts,js}')],
   synchronize: true,
