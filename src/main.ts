@@ -4,14 +4,13 @@ import { AppModule } from './app.module';
 import * as config from 'config';
 
 async function bootstrap() {
+  const serverConfig = config.get('server');
   const logger = new Logger('bootstrap');
-  const port = 3000;
   const app = await NestFactory.create(AppModule);
 
-  const serverConfig = config.get('server');
-  console.log(`serverConfig`, serverConfig);
-
+  // 默认取环境变量里面的信息 没有的话取配置里面的信息
+  const port = process.env.PORT || serverConfig.port;
   await app.listen(port);
-  logger.log(`Application listening on port ${3000}`);
+  logger.log(`Application listening on port ${port}`);
 }
 bootstrap();
