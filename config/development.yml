@@ -2,7 +2,8 @@ server:
   cors:
     origin:
       - "http://localhost:3001"
-    methods: "GET,HEAD,PUT,PATCH,DELETE"
+    # 一般post 请求是不受下面的methods 管控的所以就算把下面的POST 删除他还是会POST成功
+    methods: "OPTIONS,GET,HEAD,PUT,PATCH,POST"
     credentials: true,
     maxAge: 86400
 

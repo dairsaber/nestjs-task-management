@@ -10,9 +10,7 @@ async function bootstrap() {
 
   // cors 控制
   app.enableCors(serverConfig.cors || {});
-  logger.log(
-    `cors:  origin: ${serverConfig.origin}  methods: ${serverConfig.methods}`,
-  );
+  logger.log(`cors:   ${JSON.stringify(serverConfig.cors)} `);
 
   // 默认取环境变量里面的信息 没有的话取配置里面的信息
   const port = process.env.PORT || serverConfig.port;
