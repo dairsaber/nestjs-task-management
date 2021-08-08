@@ -1,2 +1,9 @@
+server:
+  cors:
+    origin: "http:// 192/168.3.1:*"
+
 db:
+  host: "localhost"
+  username: "root"
+  password: "123456"
   synchronize: false

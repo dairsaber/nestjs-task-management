@@ -1,8 +1,12 @@
-db:
-  host: 'localhost'
-  username: 'root'
-  password: '123456pan'
-  synchronize: true
+server:
+  cors:
+    origin:
+      - "http://localhost:3001"
+    methods: "GET,HEAD,PUT,PATCH,DELETE"
+    credentials: true
 
-jwt:
-  secret: 'mySecret'
+db:
+  host: "localhost"
+  username: "root"
+  password: "123456"
+  synchronize: true
