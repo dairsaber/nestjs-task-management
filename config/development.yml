@@ -3,7 +3,8 @@ server:
     origin:
       - "http://localhost:3001"
     methods: "GET,HEAD,PUT,PATCH,DELETE"
-    credentials: true
+    credentials: true,
+    maxAge: 86400
 
 db:
   host: "localhost"
